@@ -1,0 +1,19 @@
+name: C CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+uses: actions/checkout@v2
+name: make
+  run: make
+name: Run program
+run: ./hello
+uses: actions/upload-artifact@v2
+with:
+  name: hello-executable
+  path: ./hello
