@@ -1,8 +1,7 @@
-CC=gcc
-CFLAGS=-I.
+all: hello
 
 hello: main.c
-    $(CC) -o hello main.c $(CFLAGS)
+	gcc -o hello main.c
 
 clean:
-    rm -f hello
+	rm -f hello
